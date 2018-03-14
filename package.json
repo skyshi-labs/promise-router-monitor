@@ -13,7 +13,7 @@
     "express router",
     "express router wrapper"
   ],
-  "author": "Alif Rizki Pambudi <alifrizkipambudi@gmail.com>",
+  "authors": ["Alif Rizki Pambudi <alifrizkipambudi@gmail.com>", "Ardani Rohman <master.ardani@gmail.com>"],
   "license": "MIT",
   "repository": {
     "type": "git",
