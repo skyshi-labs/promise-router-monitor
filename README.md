@@ -22,13 +22,14 @@ npm i --save express promise-router-monitor
 const express = require('express');
 const axios = require('axios');
 const { EventEmitter } = require('events');
-const { limitPromise, WrapRouter } = require('promise-router-monitor');
+const { guardPromise, Router } = require('promise-router-monitor');
 
-/** Create event emitter to monitor/log timeout or rejected promise that wrapped with limitPromise */
+/** Create event emitter to monitor/log timeout or rejected promise that wrapped with guardPromise */
 const emitterPromise = new EventEmitter();
 emitterPromise.on('timeout', ({ promise, message }) => {
   console.log(message);
 })
+
 emitterPromise.on('reject', ({ promise, message, err }) => {
   console.log(message);
   console.log(err);
@@ -42,8 +43,8 @@ const delayPromise = (promise, time) => new Promise((resolve, reject) => setTime
 const app = express();
 app.set('env', 'development')
 
-/** Instantiate new express router with WrapRouter */
-const exampleRouter = new WrapRouter();
+/** Instantiate new express router with Router */
+const exampleRouter = new Router();
 exampleRouter.get('/limit',
   async (req, res) => {
     const url = 'https://api.chucknorris.io/jokes/random'
@@ -51,15 +52,15 @@ exampleRouter.get('/limit',
     const axiosGetPromise = delayPromise(axios.get(url), 1000)
 
     /**
-     * Object parameter for limitPromise
+     * Object parameter for guardPromise
      * @param  {Promise} {promise
      * @param  {integer} time in millisecond
      * @param  {string} location}
      */
     const props = { promise: axiosGetPromise, time: 3000, location: `'axiosDelayPromise' in ${__filename}` }
 
-    /** limitPromise with emitterPromise and object parameter */
-    const data = await limitPromise(emitterPromise)(props)
+    /** guardPromise with emitterPromise and object parameter */
+    const data = await guardPromise(emitterPromise)(props)
 
     res.json({
       status: true,

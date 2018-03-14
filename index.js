@@ -1,4 +1,4 @@
-const limitPromise = require('./lib/limit');
-const WrapRouter = require('./lib/wrap');
+const guardPromise = require('./lib/guard');
+const Router = require('./lib/wrap');
 
-module.exports = { limitPromise, WrapRouter };
+module.exports = { guardPromise, Router };
