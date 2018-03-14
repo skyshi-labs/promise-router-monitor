@@ -17,12 +17,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alfrizp/promise-router-monitor.git"
+    "url": "git+https://github.com/skyshi-labs/promise-router-monitor.git"
   },
   "bugs": {
-    "url": "https://github.com/alfrizp/promise-router-monitor/issues"
+    "url": "https://github.com/skyshi-labs/promise-router-monitor/issues"
   },
-  "homepage": "https://github.com/alfrizp/promise-router-monitor#readme",
+  "homepage": "https://github.com/skyshi-labs/promise-router-monitor#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "lodash": "^4.17.5"
