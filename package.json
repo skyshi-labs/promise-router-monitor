@@ -1,0 +1,15 @@
+{
+  "name": "promise-timeout-monitor",
+  "version": "1.0.0",
+  "description": "Wrapper promise to check timeout and wrapper express router for error auto catch",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alif Rizki Pambudi <alifrizkipambudi@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.5"
+  }
+}
