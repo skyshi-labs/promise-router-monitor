@@ -1,5 +1,5 @@
 {
-  "name": "promise-timeout-monitor",
+  "name": "promise-router-monitor",
   "version": "1.0.0",
   "description": "Wrapper promise to check timeout and wrapper express router for error auto catch",
   "main": "index.js",
