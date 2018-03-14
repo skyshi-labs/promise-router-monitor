@@ -6,8 +6,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "promise",
+    "promise timeout",
+    "promise cancel",
+    "express router",
+    "express router wrapper"
+  ],
   "author": "Alif Rizki Pambudi <alifrizkipambudi@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfrizp/promise-router-monitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alfrizp/promise-router-monitor/issues"
+  },
+  "homepage": "https://github.com/alfrizp/promise-router-monitor#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
     "lodash": "^4.17.5"
