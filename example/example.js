@@ -29,7 +29,15 @@ exampleRouter.get('/limit',
     const url1 = 'http://http://bugr.or.id/'
     const axiosGetPromise = delayPromise(axios.get(url), 1000)
 
+    /**
+     * Object parameter for limitPromise
+     * @param  {Promise} {promise
+     * @param  {integer} time in millisecond
+     * @param  {string} location}
+     */
     const props = { promise: axiosGetPromise, time: 3000, location: `'axiosDelayPromise' in ${__filename}` }
+
+    /** limitPromise with emitterPromise and object parameter */
     const data = await limitPromise(emitterPromise)(props)
 
     res.json({
